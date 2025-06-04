@@ -1,0 +1,155 @@
+/* Grundinställningar */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  color: #2c62f2;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: linear-gradient(135deg, #dbe4ff, #f0f3ff);
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.logo-placeholder {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  background: #c4c9f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #555;
+  animation: pulse 3.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.8; }
+}
+
+h1 {
+  font-family:'Consolas', monospace;
+  font-size: 2.7rem;
+  margin: 0.5rem 0 0.3rem;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Sektioner */
+main {
+  max-width: 900px;
+  margin: 3rem auto 4rem;
+  padding: 0 1rem;
+}
+
+/* Light section - Initiativ & Kontakt */
+.light-section {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 3rem;
+}
+
+/* Dark section - Om Pavent */
+.dark-section {
+  background: #2e3156;
+  color: #d9dce8;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.dark-section .container {
+  max-width: 720px;
+  margin: auto;
+}
+
+.dark-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #aab0d8;
+}
+
+/* Rubriker */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  border-left: 4px solid #2c62f2;
+  padding-left: 0.7rem;
+}
+
+/* Kort i initiativ */
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: #f0f3ff;
+  border-left: 5px solid #2c62f2;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(44,98,242,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: #1a1a1a;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(44,98,242,0.3);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0;
+}
+
+/* Kontakt */
+#contact p {
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #ccc;
+}
