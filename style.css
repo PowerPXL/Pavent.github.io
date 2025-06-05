@@ -1,14 +1,14 @@
 /* Grundinställningar */
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f9f9f9;
-  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  background: #f2f2f7;
+  color: #1c1c1e;
   line-height: 1.6;
 }
 
 a {
-  color: #2c62f2;
+  color: #007aff;
   text-decoration: none;
 }
 a:hover {
@@ -19,42 +19,89 @@ a:hover {
 header {
   text-align: center;
   padding: 3rem 1rem 2rem;
-  background: linear-gradient(135deg, #dbe4ff, #f0f3ff);
-  border-bottom: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  background: linear-gradient(135deg, #fafafa, #f2f2f7);
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .logo-placeholder {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   margin: 0 auto 1rem;
-  background: #c4c9f8;
+  background: #e5e5ea;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: #555;
+  color: #444;
   animation: pulse 3.5s infinite ease-in-out;
+}
+
+.logo-placeholder:hover {
+  background: #7d5fff;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(125, 95, 255, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  animation-duration: 1.8s;
+  cursor: pointer;
 }
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.15); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 h1 {
-  font-family:'Consolas', monospace;
-  font-size: 2.7rem;
+  font-family: 'Consolas', monospace;
+  font-size: 2.5rem;
   margin: 0.5rem 0 0.3rem;
-  color: #1a1a1a;
+  color: #1c1c1e;
 }
 
 .subtitle {
   font-weight: 300;
   font-size: 1.1rem;
-  color: #555;
+  color: #6e6e73;
 }
+
+/* Glitch animation */
+@keyframes glitch {
+  0% {
+    clip: rect(20px, 9999px, 44px, 0);
+    transform: translate(0);
+  }
+  20% {
+    clip: rect(50px, 9999px, 70px, 0);
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    clip: rect(10px, 9999px, 35px, 0);
+    transform: translate(2px, 2px);
+  }
+  60% {
+    clip: rect(45px, 9999px, 60px, 0);
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    clip: rect(30px, 9999px, 50px, 0);
+    transform: translate(1px, -1px);
+  }
+  100% {
+    clip: rect(20px, 9999px, 44px, 0);
+    transform: translate(0);
+  }
+}
+
+.logo-placeholder.glitch {
+  animation: glitch 0.5s linear 3; /* spelar glitch animation 3 gånger */
+  position: relative;
+  color: #7d5fff; /* lite mer tech-lila under glitch */
+  text-shadow:
+    2px 0 #ff3c78,
+    -2px 0 #00fff7;
+}
+
 
 /* Sektioner */
 main {
@@ -63,23 +110,20 @@ main {
   padding: 0 1rem;
 }
 
-/* Light section - Initiativ & Kontakt */
 .light-section {
   background: #ffffff;
   padding: 2.5rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   margin-bottom: 3rem;
 }
 
-/* Dark section - Om Pavent */
 .dark-section {
-  background: #2e3156;
-  color: #d9dce8;
+  background: #1c1c1e;
+  color: #f2f2f7;
   padding: 3rem 2rem;
-  border-radius: 8px;
+  border-radius: 14px;
   margin-bottom: 3rem;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
   font-size: 1.1rem;
   line-height: 1.7;
 }
@@ -94,21 +138,17 @@ main {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #aab0d8;
+  color: #d1d1d6;
 }
 
 /* Rubriker */
 h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #1a1a1a;
-  border-left: 4px solid #2c62f2;
-  padding-left: 0.7rem;
+  border-left: 2px solid #7d5fff; /* tunnare, snygg lila */
+  padding-left: 0.6rem;
+  line-height: 1.2;
 }
 
-/* Kort i initiativ */
+/* Cards */
 .cards {
   display: grid;
   gap: 1.5rem;
@@ -116,28 +156,67 @@ h2 {
 }
 
 .card {
-  background: #f0f3ff;
-  border-left: 5px solid #2c62f2;
+  background: #ffffff;
   padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(44,98,242,0.15);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content {
+  flex-grow: 1;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(44,98,242,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
 .card h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .card p {
   margin: 0;
+  color: #333;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.ascii-status {
+  font-family: 'SF Mono', 'Consolas', monospace;
+  font-size: 0.85rem;
+  color: #5e5ce6;
+  background: none;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+  margin: 1rem auto 0.4rem;
+}
+
+.project-links {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+  margin: 0 auto;
+}
+
+.project-links a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
 }
 
 /* Kontakt */
@@ -150,6 +229,6 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
-  color: #777;
-  border-top: 1px solid #ccc;
+  color: #8e8e93;
+  border-top: 1px solid #d1d1d6;
 }
