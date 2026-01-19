@@ -1,0 +1,285 @@
+/* Grundinställningar */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  background: #eeeae3;
+  color: #1c1c1e;
+  line-height: 1.6;
+}
+
+a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f8c666;
+}
+
+
+/*---------------- Header----------- */
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: #343330;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.header {
+  text-align: left;
+  color: #d5d5ff;
+  font-size: 0.9rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-placeholder {
+  width: 60px;
+  height: 55px;
+  background: #e5e5ea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #444;
+  animation: pulse 3.5s infinite ease-in-out;
+}
+
+.logo-placeholder:hover {
+  background: #f8c666;
+  color: #fff;
+  box-shadow: #f8c666;
+  animation-duration: 1.8s;
+  cursor: pointer;
+}
+
+.logo-text {
+  font-size: 3.6rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  color: #726e67;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+
+/* Glitch animation */
+@keyframes glitch {
+  0% {
+    clip: rect(20px, 9999px, 44px, 0);
+    transform: translate(0);
+  }
+  20% {
+    clip: rect(50px, 9999px, 70px, 0);
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    clip: rect(10px, 9999px, 35px, 0);
+    transform: translate(2px, 2px);
+  }
+  60% {
+    clip: rect(45px, 9999px, 60px, 0);
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    clip: rect(30px, 9999px, 50px, 0);
+    transform: translate(1px, -1px);
+  }
+  100% {
+    clip: rect(20px, 9999px, 44px, 0);
+    transform: translate(0);
+  }
+}
+
+.logo-placeholder.glitch {
+  animation: glitch 0.5s linear 3; /* spelar glitch animation 3 gånger */
+  position: relative;
+  color: #f8c666; 
+  text-shadow:
+    2px 0 #ff3c78,
+    -2px 0 #00fff7;
+}
+
+
+
+
+/*---------------Rubriker--------------- */
+
+h1 {
+  
+  font-size: 1.2rem;
+  color: #343330;
+}
+
+h2 {
+  border-left: 3px solid #f8c666;
+  line-height: 1.2;
+}
+
+h3 {
+  text-align: center;
+  color: #343330;
+  font-size: .8rem;
+}
+
+h4 {
+  color: #343330;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h5 {
+  
+  color: #f8c666;
+  font-size: 1rem;
+  margin-bottom: 0rem;
+}
+
+h6 {
+  text-align: center;
+  color: #f8c666;
+  font-size: 1rem;
+  margin-bottom: 0rem;
+}
+
+
+/* Sektioner */
+main {
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+}
+
+
+
+.light-section {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 3rem;
+}
+
+.dark-section {
+  background: #343330;
+  color: #f2f2f7;
+  padding: 2rem 2rem;
+  border-radius: 14px;
+  margin-bottom: 3rem;
+}
+
+.dark-section .container {
+  max-width: auto ;
+  margin: auto;
+}
+
+.dark-section h2 {
+  font-size: 1.4rem;
+  color: #7c7c7c;
+  border: none;
+  text-align: left;
+  font-weight: 500;
+}
+
+.dark-section p {
+  color: #d1d1d6;
+  font-size: 1rem;
+}
+
+.Reqform {
+  padding: 40px 20px; 
+  max-width: 500px; 
+  margin: 0 auto;
+}
+
+
+/* Cards */
+.service-cards {
+  background: #eeeae3;
+  color: #1c1c1e;
+  padding: 3rem 2rem;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  padding-top: 3rem;
+}
+
+.service {
+  text-align: center;
+}
+
+.service .icon {
+  width: 48px;
+  height: 48px;
+}
+
+.cards {
+  display: block;
+}
+
+.card {
+  margin: 1rem 0;
+  padding: auto;
+  background: #f0f0f0;
+  display: block;
+  text-align: left;
+}
+
+.card p {
+  color: #333;
+}
+
+.ascii-status {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.project-links {
+  font-size: 0.75rem;
+  color: #666;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.project-links a {
+  color: #666;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+  color: #f8c666;
+}
+
+/* Kontakt */
+#contact p {
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #8e8e93;
+  border-top: 1px solid #d1d1d6;
+}
+
+

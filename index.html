@@ -3,19 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>:pavent – som en rättvis framtid </title>
+  <title>:pavent – WEBB & IT-drift</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Playfair+Display&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
-
-  <header>
+<header>
+  <div class="logo-container">
     <div class="logo-placeholder">:P</div>
-    <h1>:pavent</h1>
-    <p class="subtitle">Tech, Art & Entertainment som en rättvis framtid</p>
-  </header>
 
-  <main>
+    <a href="/" class="logo-text" aria-label="Pavent – startsida">
+      Pavent
+    </a>
+  </div>
+  <p class="header">
+  Vi skapar professionella hemsidor med företagsnamn, logga och erbjuder IT-tjänster till nystartade bolag. STARTER gör det möjligt för alla företag att få en profil med företagsmail på nätet med Sveriges mest kostnadseffektiva lösning för att attrahera seriösa kunder. För verksamheter med större behov och frekventa uppdateringar såsom menyer, tabeller, priser eller grafiska kampanjer erbjuder vi fullständig drift och support. Vi kan även hjälpa med webbshop och bokningsststem. 
+  </p>
+</header>
+<main>
+  <h1>█ STARTER - Redo direkt. Lågt pris.</h1>     
+<div class="service-cards">
+  <div class="service">
+    <img src="static/images/at.svg" alt="Mail ikon" class="icon">
+    <h2>Företagsmail</h2>
+    <h3>Proffsigt mail med företagsnamn Adam.Larsson@Advokat.se</h3>
+  </div>
+  <div class="service">
+    <img src="static/images/weblogo.svg" alt="Webb ikon" class="icon">
+    <h2>Hemsida + logotyp</h2>
+    <h3>Stilren och anpassad hemsida www.AdamAdvokat.se</h3>
+  </div>
+
+  <div class="service">
+    <img src="static/images/lock.svg" alt="Moln ikon" class="icon">
+    <h2>Säkra dokument</h2>
+    <h3>Kryptering av företagets filer och dokument</h3>
+  </div>
+</div>
+
+<h4>Pris 200 :- / mån (ex. moms)</h4>
+<p>Som nystartat företag eller mindre verksamhet omfattas du av vår förmånligaste IT-lösning. Från vårt kontor i Malmö täcker vi hela Norden med en rimlig prismodell för att ge små verksamheter en smidig och professionell uppstart av hemsida, mail företag och säker lagring av filer/dokument. </p>
+
+<section id="services" class="Reqform">
+  <h4>Kontakta oss för aktivering och frågor</h4>
+    
+  <form action="https://formspree.io/f/mjggwqag" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+    
+    <div style="display: flex; flex-direction: column;">
+      <label style="margin-bottom: 5px; font-weight: bold; font-family: sans-serif;">Din e-mail:</label>
+      <input type="email" name="email" placeholder="namn@gmail.se" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;">
+    </div>
+
+    <div style="display: flex; flex-direction: column;">
+      <label style="margin-bottom: 5px; font-weight: bold; font-family: sans-serif;">Företagsnamn & vad ni är i behov av:</label>
+      <textarea name="message" placeholder="AdamAdvokat heter företaget och behöver konfigurera företagsmail, hemsida och logga..." required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; min-height: 100px; resize: vertical;"></textarea>
+    </div>
+
+    <button type="submit" style="background-color: #000; color: #fff; padding: 15px; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; transition: opacity 0.2s;">
+      Skicka 
+    </button>
+    <p>*Vi behandlar förfrågningar löpande. Vi återkommer via mail och visar upplägget. Vid beställning kommer du ha direktkontakt med en tekniker.</p>
+  </form>
+</section>
+
+
+
         <!--Cards och status
 ░░░░░░░░░░ Planering
 ▓░░░░░░░░░ Påbörjat
@@ -24,45 +76,64 @@
 ▓▓▓▓▓▓▓░░░ Nära klart
 ▓▓▓▓▓▓▓▓▓▓ Lanserat
 	  -->
-  <section id="initiatives" class="light-section">
-  <h2>Pipeline</h2>
+
+    <section id="about" class="dark-section">
+      <div class="container">
+        <h2>Om Pavent</h2>
+        <p>Vi är en teknisk aktör baserad i <strong>Malmö</strong> som utvecklar lösningar för både nutid och framtid. 
+    Vi drivs av en vision om en digital värld präglad av <strong>rättvisa</strong>, <strong>inkludering</strong> och <strong>innovation</strong>.</p> 
+    <h2>Våra sektioner</h2  >
+    <p>Verksamheten är uppdelad i tre sektioner där den största är 
+    <strong>IT-säkerhet och drift</strong> för små som stora företag. 
+    Vi har även en utvecklingsdel som främst arbetar med webb- och mobilapplikationer, 
+    samt en sektion som fokuserar på projekt där tech möter art för att skapa 
+    meningsfulla digitala upplevelser.
+  </p>
+  <h2>Grundare :Pavent</h2>
+  <p>- Vi vill hjälpa den mindre företagaren att komma på benen snabbt med en proffsig och billig företagsprofil. Du ska inte behöva vara teknisk kunnig för att ha en proffsig företagsmail, en stilren hemsida med säker och krypterad lagring för företagets filer. Du ska slippa allt strul med vad tekniken i bakgrunden kan ge. För oss är stabil IT-drift ingen lyx, utan en självklarhet som bara ska fungera, och det ska vara prisvärt.</p>
+      </div>
+    </section>
+
+
+  <section id="pipeline" class="light-section">
+    <h2>Pipeline</h2>
   <div class="cards">
 
     <div class="card">
       <div class="card-content">
-        <h3>:powerPXL</h3>
+        <h5>:powerPXL</h5>
+        <pre class="ascii-status">▓▓░░░░░░░░ Planering</pre>
         <p>Utforskar i området där tech möter art till en rättvis framtid.</p>
       </div>
       <div class="card-footer">
-        <pre class="ascii-status">▓▓░░░░░░░░ Planering</pre>
-        <p class="project-links"
-          <a href="https://example.com" target="_blank">Webbplats N/A</a>
-          
+
+        <p class="project-links">
+          <a href="x" target="_blank">N/A · N/A</a>
         </p>
       </div>
     </div>
-
+  
         <div class="card">
       <div class="card-content">
-        <h3>Folkdom –</h3>
-        <p>Ett nystartat uppdrag inom området "social konsensus i samhället". Vi jobbar på det, mer info kommer.</p>
+        <h5>Folkdom –</h5>
+        <pre class="ascii-status">░░░░░░░░░░ Planering</pre>
+        <p>Ett nystartat uppdrag inom området "social konsensus i samhället".</p>
       </div>
       <div class="card-footer">
-        <pre class="ascii-status">░░░░░░░░░░ Planering</pre>
         <p class="project-links">
-          <a href="http://www.pavent.se" target="_blank">-X-</a> · 
-		  <a href="http://www.pavent.se" target="_blank">-X-</a>
+          <a href="http://www.pavent.se" target="_blank">N/A</a> · 
+		  <a href="http://www.pavent.se" target="_blank">N/A</a>
         </p>
       </div>
     </div>
 
     <div class="card">
       <div class="card-content">
-        <h3>Polla.se – Valprojektet om framtidens ledare</h3>
+        <h5>Polla.se – Valprojektet om framtidens ledare</h5>
+        <pre class="ascii-status">▓▓▓░░░░░░░ Under arbete / Pausad</pre>
         <p>Ett fristående valprojekt där du röstar på framtidens ledare. Oberoende, skapat för att spegla folkets sanna vilja.</p>
       </div>
       <div class="card-footer">
-        <pre class="ascii-status">▓▓▓░░░░░░░ Under arbete / Pausad</pre>
         <p class="project-links">
           <a href="https://polla.se" target="_blank">Webbplats</a> · 
 		  <a href="https://www.kickstarter.com/projects/1259034523/231709322" target="_blank">Kickstarter</a>
@@ -72,22 +143,13 @@
 
   </div>
 </section>
-    <section id="about" class="dark-section">
-      <div class="container">
-        <h2>Om Pavent</h2>
-        <p>
-          Pavent är en teknisk aktör som utvecklar lösningar för nutid och framtid.
-          Vi drivs av en vision om en digital värld präglad av <strong>rättvisa</strong>, <strong>inkludering</strong> och <strong>innovation</strong>.
-        </p>
-        <p>
-          Vi arbetar med bland annat webbutveckling och underhållning inom digitala plattformar - där konst möter tech för att skapa meningsfulla upplevelser.
-        </p>
-      </div>
-    </section>
+
+
+
 
     <section id="contact" class="light-section">
       <h2>Kontakt</h2>
-      <p>Mail · <a href="mailto:info.pavent@gmail.com">info.pavent@gmail.com</a></p>
+      <p>Mail · <a href="mailto:info.pavent@gmail.com">support@pavent.se</a></p>
     </section>
 
   </main>
