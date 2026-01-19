@@ -282,4 +282,42 @@ footer {
   border-top: 1px solid #d1d1d6;
 }
 
+@media (max-width: 1000px) {
+  
+  .header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center; /* Ser ofta bättre ut på mobil */
+  }
+
+  .logo-text {
+    font-size: 2.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .light-section, .dark-section {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Se till att huvudbehållaren inte har för mycket marginal */
+  main {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  /* Service-kort: tvinga dem till 1 kolumn om de blir för trånga */
+  .service-cards {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+  }
+
+  /* Formulär behöver ta upp mer bredd på små skärmar */
+  .Reqform {
+    padding: 20px 10px;
+    max-width: 100%;
+  }
+}
+
+
+
 
