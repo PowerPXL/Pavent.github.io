@@ -156,6 +156,15 @@ h6 {
   margin-bottom: 0rem;
 }
 
+/* Gör länken inuti rubriken svart/mörk och ta bort understrykning */
+.order-link-heading a {
+  color: inherit; /* Tar färgen från h2-inställningen */
+  text-decoration: none;
+}
+
+.order-link-heading a:hover {
+  color: #f8c666; /* Gul färg när man hovrar med musen */
+}
 
 /* Sektioner */
 main {
