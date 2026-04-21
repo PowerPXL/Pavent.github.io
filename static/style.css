@@ -13,20 +13,14 @@
 }
 
 html, body {
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  cursor: default;
 }
 
 /* Grain overlay */
@@ -147,6 +141,95 @@ body::after {
 .corner--tr { top: 1.5rem; right: 1.5rem; text-align: right; }
 .corner--bl { bottom: 1.5rem; left: 1.5rem; }
 .corner--br { bottom: 1.5rem; right: 1.5rem; text-align: right; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 3rem;
+  width: min(520px, 90vw);
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.form input,
+.form textarea {
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--accent);
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form button {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form button:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.form-note {
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+/* HERO CENTERING */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6vh; /* ger lite luft uppåt */
+  position: relative;
+}
+
+/* CONTACT SECTION */
+.contact {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1rem;
+  position: relative;
+}
+
 
 @media (max-width: 600px) {
   .corner { display: none; }
